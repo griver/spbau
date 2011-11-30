@@ -1,0 +1,10 @@
+all: build-all 
+
+build-all: one.cpp
+	g++ one.cpp -o one
+	
+
+clean: 
+	rm -f *.o
+
+.PHONY: clean build-all 

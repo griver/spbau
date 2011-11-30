@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/614/trunk/labs/2011/sorokin/Scheduler/02
+END
+Scheduler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/613/trunk/labs/2011/sorokin/Scheduler/02/Scheduler.cpp
+END
+Task.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/613/trunk/labs/2011/sorokin/Scheduler/02/Task.cpp
+END
+Scheduler.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/613/trunk/labs/2011/sorokin/Scheduler/02/Scheduler.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/613/trunk/labs/2011/sorokin/Scheduler/02/main.cpp
+END
+Walker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/613/trunk/labs/2011/sorokin/Scheduler/02/Walker.cpp
+END
+Task.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/613/trunk/labs/2011/sorokin/Scheduler/02/Task.h
+END
+Walker.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/613/trunk/labs/2011/sorokin/Scheduler/02/Walker.h
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/613/trunk/labs/2011/sorokin/Scheduler/02/makefile
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/213/trunk/labs/2011/sorokin/so/StaticLoading
+END
+psnapshot.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/213/trunk/labs/2011/sorokin/so/StaticLoading/psnapshot.c
+END
+addToPath.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/213/trunk/labs/2011/sorokin/so/StaticLoading/addToPath.sh
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/213/trunk/labs/2011/sorokin/so/StaticLoading/main.c
+END
+psnapshot.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/213/trunk/labs/2011/sorokin/so/StaticLoading/psnapshot.h
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/213/trunk/labs/2011/sorokin/so/StaticLoading/makefile
+END
