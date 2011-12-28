@@ -1,0 +1,36 @@
+int main() ()
+{
+  int D.1714;
+
+  {
+    int important_var;
+
+    important_var = 0;
+    special_function (&important_var);
+    D.1714 = 0;
+    return D.1714;
+  }
+  D.1714 = 0;
+  return D.1714;
+}
+
+
+int special_function(int*) (int * super_function_variable)
+{
+  int D.1716;
+  int D.1717;
+  int D.1718;
+  int D.1719;
+  int returned_var;
+
+  D.1716 = *super_function_variable;
+  D.1717 = D.1716 + 1;
+  *super_function_variable = D.1717;
+  D.1718 = *super_function_variable;
+  returned_var = D.1718 % 2;
+  *super_function_variable = returned_var;
+  D.1719 = *super_function_variable;
+  return D.1719;
+}
+
+

@@ -1,0 +1,35 @@
+
+Function GCD
+Args [ a b ]
+Body
+    Switch
+    Condition
+        Read b
+    Case
+        Read a
+    Case
+	Write res [ a b ]
+        Call GCD [ b res ] 
+    EndSwitch
+EndFunction
+
+
+Function nestedLoop
+Args [ x y  Ref key ]
+Body
+	Loop 
+	Condition
+		Read x
+		Write x [ x 1 ] 
+	Body
+		Write y [ y x ]
+		Loop
+		Condition
+			Write x [ z ]
+		Body
+			Read Key
+		EndLoop	
+	EndLoop    
+EndFunction
+
+Decl Z
