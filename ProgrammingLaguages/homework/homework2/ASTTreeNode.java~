@@ -1,0 +1,8 @@
+package homework2;
+
+public interface ASTTreeNode {
+
+    ASTTreeNode reduse(); 
+
+    String getType();    
+}
