@@ -1,0 +1,7 @@
+задача номер 19
+#!/bin/bash
+
+echo -n "sin($1)= "
+echo -e "scale = 3\n s($1)\n" | bc -lq
+
+

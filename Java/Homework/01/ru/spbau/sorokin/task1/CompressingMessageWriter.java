@@ -1,0 +1,25 @@
+package ru.spbau.sorokin.task1;
+
+public class CompressingMessageWriter implements MessageWriter {
+    private MessageWriter writer = null;
+    private Message msg = new Message();
+    
+    public CompressingMessageWriter(MessageWriter messageWriter)  {
+        writer = messageWriter;    
+    }
+    public void writeMessage(Message message) {
+        msg.append(message);
+        if (msg.size() > message.size()) { 
+            writer.writeMessage(msg);
+            msg.clear();
+        }
+    } 
+
+    public void close() {
+        if(msg.size() != 0) {
+            writer.writeMessage(msg);
+        }
+        writer.close();
+            
+    }
+}

@@ -1,0 +1,57 @@
+#include<iostream>
+#include<fstream>
+#include<string>
+#include<map>
+#include<set>
+
+typedef std::multimap<std::string, std::string >::iterator my_iterator; 
+
+class Comparator {
+public:
+    bool operator()(my_iterator const &a, my_iterator const &b) const {
+        return (a->second < b->second);   
+    }
+};
+
+void print_map(std::multimap< std::string, std::string > & names) {
+    my_iterator it = names.begin();
+    for(it; it!=names.end(); it++) {
+        std::cout<<it->first<<"  "<<it->second<<std::endl;
+    } 
+}
+
+void print_set(std::multiset<my_iterator, Comparator> & my_set) {
+    std::multiset<my_iterator, Comparator>:: iterator it = my_set.begin();
+    for(it; it != my_set.end(); ++it) {
+        std::cout<<(*it)->first<<" "<<(*it)->second<<std::endl;
+    }
+}
+
+int main() {
+    int n = 0;
+    std::string first_name, second_name;
+    my_iterator curr;
+    std::multimap<std::string, std::string> map_first, map_second;
+    std::multiset<my_iterator, Comparator> men_set;
+    std::ifstream in("input.txt");
+    
+    
+    in>>n;
+    
+    for(int i = 0; i < n; ++i) {
+        in>>first_name>>second_name;
+        curr = map_first.insert(std::make_pair(first_name, second_name) );
+        men_set.insert(curr);
+        //map_second.insert(std::make_pair(second_name, first_name) );        
+        
+    }    
+    std::cout<<"Отсортировать по имени(y/n)?"<<std::endl;
+    std::string answer;
+    std::cin>>answer;
+    if(answer == "y") {
+        print_map(map_first);
+    } else {
+        print_set(men_set);       
+    }
+    return 0;
+}

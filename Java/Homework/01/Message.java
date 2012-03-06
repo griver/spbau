@@ -1,0 +1,27 @@
+/*
+ * Класс Message Пункт 1.
+ */
+package ru.spbau.sorokin.task1;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Message {
+
+		private List<String> messageLines;
+		
+		public void append(Message message) {
+                messageLines.addAll(message.getLines());
+				// какая-то реализация метода
+		}
+		
+		public List<String> getLines() {
+				//какая-то реализация этой фигни
+				return Collections.unmodifiableList(messageLines);
+		}
+        
+        public void add(String line) {
+                messageLines.add(line);
+        }
+}
