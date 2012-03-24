@@ -1,0 +1,10 @@
+interface limiter
+
+
+class clientLimiter implements limiter
+а еще в нем ссыка на дефолтный лимитер
+
+еще цепочка обязанностей
+ 
+ёёёёёёёёёёёёёёёёё
+

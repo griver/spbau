@@ -58,19 +58,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Main.java">
+      <file leaf-file-name="Bottle.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Bottle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="22" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
+            <state line="10" column="23" selection-start="226" selection-end="245" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Field.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Field.java">
+      <file leaf-file-name="IFieldObject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/IFieldObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="21" selection-start="196" selection-end="196" vertical-scroll-proportion="0.21669342">
+            <state line="9" column="30" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cell.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Cell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="27" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Column.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Column.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="5" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Policeman.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Policeman.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="18" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IField.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/IField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="5" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IPathAlgorithm.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/IPathAlgorithm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="13" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IMovingObject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/IMovingObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="44" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeeAlgorithm.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/LeeAlgorithm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="8" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.39534885">
+              <folding>
+                <element signature="e#498#512#0" expanded="true" />
+                <element signature="e#1028#1035#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Drunk.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Drunk.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="41" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,8 +166,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/Main.java" />
-        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/Field.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/Bar.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/PoliceDistrict.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/HexagonalField.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/IMovingObject.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/Сolumn.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/Bottle.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/Column.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/HumanStates.java" />
+        <option value="$PROJECT_DIR$/src/DrunkStates.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/Drunk.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/Lantern.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/IFieldObject.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/IField.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/IPathAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/Policeman.java" />
+        <option value="$PROJECT_DIR$/src/ProblemOfDrunks/LeeAlgorithm.java" />
       </list>
     </option>
   </component>
@@ -129,6 +218,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -171,12 +261,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -206,24 +296,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -249,6 +321,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -330,11 +420,11 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24816984" sideWeight="0.67180276" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32819724" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -396,14 +486,93 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Bar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" />
+        <state line="14" column="30" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Field.java">
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/ICell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="196" selection-end="196" vertical-scroll-proportion="0.21669342" />
+        <state line="11" column="16" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/HexagonalField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="8" selection-start="360" selection-end="451" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/PoliceDistrict.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="121" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/DrunkStates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="1" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Lantern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Bottle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="23" selection-start="226" selection-end="245" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/IFieldObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="30" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="27" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Column.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="5" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/IField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="5" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Drunk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="41" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/IMovingObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="44" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/IPathAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/Policeman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="18" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProblemOfDrunks/LeeAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="8" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.39534885">
+          <folding>
+            <element signature="e#498#512#0" expanded="true" />
+            <element signature="e#1028#1035#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
