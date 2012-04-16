@@ -1,4 +1,6 @@
-package ProblemOfDrunks;
+package ProblemOfDrunks.field;
+
+import ProblemOfDrunks.objects.IFieldObject;
 
 /**
  * Created by IntelliJ IDEA.
@@ -14,7 +16,7 @@ public interface ICell {
     
     void setFieldObject(IFieldObject object);
     
-    void setCoordinates(int[] values);
+    void setCoordinates(int... values);
     
     int[] getCoordinates();
     

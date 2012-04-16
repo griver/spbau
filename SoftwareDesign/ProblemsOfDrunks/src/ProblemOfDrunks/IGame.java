@@ -1,5 +1,8 @@
 package ProblemOfDrunks;
 
+import ProblemOfDrunks.field.IField;
+import ProblemOfDrunks.objects.IGameObject;
+
 /**
  * Created by IntelliJ IDEA.
  * User: griver
@@ -8,7 +11,9 @@ package ProblemOfDrunks;
  * To change this template use File | Settings | File Templates.
  */
 public interface IGame {
+    IField getField();
     void setField(IField field);
-    void addGameObject(IGameObject obj);
+    void registerActiveObject(IGameObject obj);
+    void removeActiveObject(IGameObject obj);
     boolean nextSteep();
 }

@@ -1,4 +1,4 @@
-package ProblemOfDrunks;
+package ProblemOfDrunks.objects.moving;
 
 /**
  * Created by IntelliJ IDEA.

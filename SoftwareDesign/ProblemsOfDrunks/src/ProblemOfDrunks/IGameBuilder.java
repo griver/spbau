@@ -1,18 +1,16 @@
 package ProblemOfDrunks;
 
-import java.util.List;
+import ProblemOfDrunks.field.IField;
 
 /**
  * Created by IntelliJ IDEA.
  * User: griver
- * Date: 19.03.12
- * Time: 3:07
+ * Date: 07.04.12
+ * Time: 19:34
  * To change this template use File | Settings | File Templates.
  */
-public interface IPathAlgorithm {
-    List<ICell>  findPath(ICell startCell, ICell endCell );
-
-    IField getField();
-
+public interface IGameBuilder {
+    IGame buildGame();
+    void setGame(IGame game);
     void setField(IField field);
 }
