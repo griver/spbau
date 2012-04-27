@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/coffee_machine/coffee_machine.iml" filepath="$PROJECT_DIR$/coffee_machine/coffee_machine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common_files.iml" filepath="$PROJECT_DIR$/common_files.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vanding_machine/vanding_machine.iml" filepath="$PROJECT_DIR$/vanding_machine/vanding_machine.iml" />
+    </modules>
+  </component>
+</project>
+
