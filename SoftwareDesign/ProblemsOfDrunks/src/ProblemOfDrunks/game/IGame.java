@@ -1,5 +1,6 @@
-package ProblemOfDrunks;
+package ProblemOfDrunks.game;
 
+import ProblemOfDrunks.game.exeption.GameStepException;
 import ProblemOfDrunks.field.IField;
 import ProblemOfDrunks.objects.IGameObject;
 
@@ -15,5 +16,5 @@ public interface IGame {
     void setField(IField field);
     void registerActiveObject(IGameObject obj);
     void removeActiveObject(IGameObject obj);
-    boolean nextSteep();
+    boolean nextStep() throws GameStepException;
 }

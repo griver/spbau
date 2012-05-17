@@ -12,11 +12,8 @@ import ProblemOfDrunks.field.IField;
  */
 public interface IFieldObject{
     void getColliding(IMovingObject object);
-    void processViewing(IGameObject object);
 
     void setField(IField field);
-
-    IField getField();
 
     ICell getCell();
 

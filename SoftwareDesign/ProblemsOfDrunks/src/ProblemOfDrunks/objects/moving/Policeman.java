@@ -1,10 +1,9 @@
 package ProblemOfDrunks.objects.moving;
 
 import ProblemOfDrunks.field.ICell;
+import ProblemOfDrunks.field.IPathAlgorithm;
 import ProblemOfDrunks.objects.IFieldObject;
-import ProblemOfDrunks.objects.IGameObject;
 import ProblemOfDrunks.objects.IMovingObject;
-import ProblemOfDrunks.algorithm.IPathAlgorithm;
 import ProblemOfDrunks.objects.buildings.PoliceDistrict;
 
 /**
@@ -30,11 +29,6 @@ public class Policeman extends AMovingObject {
     //===/Constructors===================================================
 
     //===Methods=========================================================
-    @Override
-    public void processViewing(IGameObject object) {
-        object.viewFieldObject(this);
-    }
-
 
     @Override
     public void getColliding(IMovingObject object) {

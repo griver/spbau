@@ -1,5 +1,8 @@
-package ProblemOfDrunks;
+package ProblemOfDrunks.game.impl;
 
+import ProblemOfDrunks.game.exeption.GameStepException;
+import ProblemOfDrunks.game.IGame;
+import ProblemOfDrunks.objects.exception.MakeActionException;
 import ProblemOfDrunks.field.IField;
 import ProblemOfDrunks.objects.IGameObject;
 
@@ -16,16 +19,13 @@ import java.util.LinkedList;
 public class DrunkGame implements IGame {
     //===Fields==========================================================
     private IField field;
-    private int steep;
     private HashSet<IGameObject> activeObjects = new HashSet<IGameObject>();
     private LinkedList<IGameObject> addedObjects = new LinkedList<IGameObject>();
     private LinkedList<IGameObject> removedObjects = new LinkedList<IGameObject>();
     //===/Fields=========================================================
 
     //===Constructors====================================================
-    DrunkGame() {
-        steep = 0;
-    }
+    public DrunkGame() {}
     //===/Constructors===================================================
 
     //===Methods=========================================================
@@ -40,20 +40,22 @@ public class DrunkGame implements IGame {
     }
 
     @Override
-    public boolean nextSteep() {
-        while(removedObjects.isEmpty() == false) {
-            activeObjects.remove(removedObjects.removeFirst());
-        }
+    public boolean nextStep() throws GameStepException {
+        try {
+            activeObjects.removeAll(removedObjects);
+            activeObjects.addAll(addedObjects);
 
-        while(addedObjects.isEmpty() == false) {
-            activeObjects.add(addedObjects.removeFirst());
-        }
+            removedObjects.clear();
+            addedObjects.clear();
 
-        if(activeObjects.isEmpty())
-            return false;
+            if(activeObjects.isEmpty())
+                return false;
 
-        for(IGameObject object : activeObjects) {
-            object.makeAction();
+            for(IGameObject object : activeObjects) {
+                object.makeAction();
+            }
+        } catch (MakeActionException e) {
+            throw new GameStepException();
         }
         return true;
     }

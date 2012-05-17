@@ -1,7 +1,7 @@
 package ProblemOfDrunks.field;
 
-import ProblemOfDrunks.exeption.InvalidCoordinateException;
-import ProblemOfDrunks.exeption.NotEmptyCellException;
+import ProblemOfDrunks.field.exception.InvalidCoordinateException;
+import ProblemOfDrunks.field.exception.NotEmptyCellException;
 import ProblemOfDrunks.objects.IFieldObject;
 
 import java.util.List;
@@ -20,5 +20,5 @@ public interface IField {
     void setCell(ICell cell, int... coordinates) throws InvalidCoordinateException;
     int getNumberOfCells();
     int[] getSizes();
-    int distance(ICell a, ICell b) throws  InvalidCoordinateException;
+    int distance(ICell a, ICell b) throws InvalidCoordinateException;
 }

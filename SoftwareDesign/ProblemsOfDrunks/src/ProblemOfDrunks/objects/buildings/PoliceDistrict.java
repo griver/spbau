@@ -1,11 +1,14 @@
 package ProblemOfDrunks.objects.buildings;
 
-import ProblemOfDrunks.exeption.InvalidCoordinateException;
-import ProblemOfDrunks.exeption.NotEmptyCellException;
+import ProblemOfDrunks.field.exception.CoordinateException;
+import ProblemOfDrunks.field.exception.InvalidCoordinateException;
+import ProblemOfDrunks.game.IGame;
+import ProblemOfDrunks.objects.exception.MakeActionException;
+import ProblemOfDrunks.field.exception.NotEmptyCellException;
 import ProblemOfDrunks.field.ICell;
 import ProblemOfDrunks.field.IField;
-import ProblemOfDrunks.IGame;
 
+import ProblemOfDrunks.objects.IGameObject;
 import ProblemOfDrunks.objects.moving.Drunk;
 import ProblemOfDrunks.objects.moving.DrunkStates;
 import ProblemOfDrunks.objects.moving.Policeman;
@@ -21,7 +24,7 @@ import java.util.LinkedList;
  * Time: 3:45
  * To change this template use File | Settings | File Templates.
  */
-public class PoliceDistrict extends AGameObject {
+public class PoliceDistrict implements IGameObject {
     //===Fields==========================================================
     private IField field;
     private Lantern lantern;
@@ -40,7 +43,7 @@ public class PoliceDistrict extends AGameObject {
 
     //===Methods=========================================================
     @Override
-    public void makeAction() {
+    public void makeAction() throws MakeActionException {
         if(entrance.isEmpty() == false) {
             return;
         }
@@ -52,27 +55,29 @@ public class PoliceDistrict extends AGameObject {
 
         while (!queue.isEmpty() && getPolicemenNumber() != 0) {
             ICell v = queue.removeFirst();
+            try{
+                if(!v.isEmpty()) {
+                    if(v.getFieldObject() instanceof Drunk) {
+                        this.findDrunk((Drunk)v.getFieldObject());
+                    }
+                }
 
-            if(!v.isEmpty()) {
-                v.getFieldObject().processViewing(this);
-            }
 
-            try {
                 for(ICell u : field.getCellNeighbors(v)) {
                     if(lantern.isLighted(u) &&  visited.contains(u) == false) {
                         queue.addLast(u);
                         visited.add(u);
                     }
                 }
-            } catch (InvalidCoordinateException e) {
-                e.printStackTrace(System.err);
-                System.exit(0);
+            } catch (CoordinateException e) {
+                System.err.println("Error in PoliceDistrict action");
+                throw new MakeActionException();
             }
         }
     }
 
     // Если найдет пьяницу выпустит полицейского
-    public void viewFieldObject(Drunk drunk) {
+    public void findDrunk(Drunk drunk) throws NotEmptyCellException, InvalidCoordinateException{
         if(drunk.getState() != DrunkStates.LYING)
             return;
         if(entrance.isEmpty() == false)
@@ -84,13 +89,12 @@ public class PoliceDistrict extends AGameObject {
             field.addObject(policeman, entrance.getCoordinates());
             game.registerActiveObject(policeman);
         } catch (InvalidCoordinateException e) {
-            System.err.println("Invalid entance coordinate");
-            e.printStackTrace(System.err);
-            System.exit(0);
+            System.err.println("Invalid entance coordinate (trying to add policeman) ");
+            throw e;
+
         } catch (NotEmptyCellException e) {
-            System.err.println("Entance cell is already occupied");
-            e.printStackTrace(System.err);
-            System.exit(0);
+            System.err.println("Entance cell is already occupied (trying to add policeman)");
+            throw e;
         }
 
     }
@@ -116,7 +120,7 @@ public class PoliceDistrict extends AGameObject {
         return policemans.size();
     }
 
-    public void  setLatern(Lantern lantern) {
+    public void  setLantern(Lantern lantern) {
         this.lantern = lantern;
     }
 

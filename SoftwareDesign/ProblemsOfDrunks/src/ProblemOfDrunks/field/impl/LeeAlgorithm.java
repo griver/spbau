@@ -1,6 +1,7 @@
-package ProblemOfDrunks.algorithm;
+package ProblemOfDrunks.field.impl;
 
-import ProblemOfDrunks.exeption.InvalidCoordinateException;
+import ProblemOfDrunks.field.IPathAlgorithm;
+import ProblemOfDrunks.field.exception.InvalidCoordinateException;
 import ProblemOfDrunks.field.ICell;
 import ProblemOfDrunks.field.IField;
 

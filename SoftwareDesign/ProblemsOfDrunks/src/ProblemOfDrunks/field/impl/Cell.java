@@ -1,5 +1,6 @@
-package ProblemOfDrunks.field;
+package ProblemOfDrunks.field.impl;
 
+import ProblemOfDrunks.field.ICell;
 import ProblemOfDrunks.objects.IFieldObject;
 
 /**
@@ -47,6 +48,11 @@ public class Cell implements ICell {
     @Override
     public int[] getCoordinates() {
         return this.coordinates;
+    }
+
+    public char getSymbol() {
+        if(this.isEmpty()) return '';
+        else return object.getSymbol();
     }
     //==/Setters and getters=============================================
 

@@ -1,9 +1,9 @@
 package ProblemOfDrunks.objects.moving;
 
-import ProblemOfDrunks.exeption.InvalidCoordinateException;
+import ProblemOfDrunks.field.exception.InvalidCoordinateException;
+import ProblemOfDrunks.objects.exception.MakeActionException;
 import ProblemOfDrunks.field.ICell;
 import ProblemOfDrunks.objects.IFieldObject;
-import ProblemOfDrunks.objects.IGameObject;
 import ProblemOfDrunks.objects.IMovingObject;
 import ProblemOfDrunks.objects.things.Bottle;
 import ProblemOfDrunks.objects.things.Column;
@@ -52,10 +52,6 @@ public class Drunk extends AMovingObject {
         this.setState(DrunkStates.SLEEP);
     }
 
-    @Override
-    public void processViewing(IGameObject object) {
-        object.viewFieldObject(this);
-    }
 
     @Override
     public void getColliding(IMovingObject object) {
@@ -63,7 +59,7 @@ public class Drunk extends AMovingObject {
     }
 
     @Override
-    public void makeAction() {
+    public void makeAction() throws MakeActionException {
         try {
             if(this.state != DrunkStates.AWAKE)
                 return;
@@ -89,8 +85,8 @@ public class Drunk extends AMovingObject {
                 obj.getColliding(this);
             }
         } catch(InvalidCoordinateException e) {
-            e.printStackTrace(System.err);
-            System.exit(0);
+            System.out.println("InvalidCoordinateExcetion in Drunk.makeAction()");
+            throw new MakeActionException();
         }
 
     }

@@ -1,7 +1,5 @@
-package ProblemOfDrunks.algorithm;
+package ProblemOfDrunks.field;
 
-import ProblemOfDrunks.field.ICell;
-import ProblemOfDrunks.field.IField;
 
 import java.util.List;
 

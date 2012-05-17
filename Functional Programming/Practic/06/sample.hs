@@ -2,9 +2,13 @@ z = 1
 
 p = 2
 
+--module myModule (factorial) where
+
 add x y = x + y
 
 doubleAdd x y = 2*x + 2*y 
+к любым типам
+
 
 lambdaMinus  = \x y -> x - y 
 
@@ -21,7 +25,12 @@ tail_ended_helper= \accumulator n -> if(n > 1) then tail_ended_helper (accumulat
 
 tailEndedFactorial n = tail_ended_helper 1 n 
 
+k = \x y -> x
+
 mySignum :: Int -> Int
 mySignum n | n > 0 = 1
            | n < 0 = (-1)
-           | n == 0 = 0    
+           | n == 0 = 0  
+
+superAdd = add (3.5::Double) (2.9::Double) 
+

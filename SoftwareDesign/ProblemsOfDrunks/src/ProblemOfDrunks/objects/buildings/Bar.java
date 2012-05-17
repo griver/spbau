@@ -1,10 +1,13 @@
 package ProblemOfDrunks.objects.buildings;
 
-import ProblemOfDrunks.exeption.InvalidCoordinateException;
-import ProblemOfDrunks.exeption.NotEmptyCellException;
+import ProblemOfDrunks.field.exception.CoordinateException;
+import ProblemOfDrunks.field.exception.InvalidCoordinateException;
+import ProblemOfDrunks.game.IGame;
+import ProblemOfDrunks.objects.exception.MakeActionException;
+import ProblemOfDrunks.field.exception.NotEmptyCellException;
 import ProblemOfDrunks.field.ICell;
 import ProblemOfDrunks.field.IField;
-import ProblemOfDrunks.IGame;
+import ProblemOfDrunks.objects.IGameObject;
 import ProblemOfDrunks.objects.moving.Drunk;
 import ProblemOfDrunks.objects.things.Bottle;
 
@@ -15,7 +18,8 @@ import ProblemOfDrunks.objects.things.Bottle;
  * Time: 3:43
  * To change this template use File | Settings | File Templates.
  */
-public class Bar extends AGameObject {
+
+public class Bar implements IGameObject {
     //===Fields==========================================================
     private IField field;
     private ICell entrance;
@@ -34,15 +38,20 @@ public class Bar extends AGameObject {
 
     //===Methods=========================================================
     @Override
-    public void makeAction() {
-        ++counter;
-        if(counter % 20 == 0) {
-            if(entrance.isEmpty())
-                releaseDrunk();
+    public void makeAction() throws MakeActionException {
+        try{
+            ++counter;
+            if(counter % 20 == 0) {
+                if(entrance.isEmpty())
+                    releaseDrunk();
+            }
+        }catch (CoordinateException e) {
+            System.err.println("Error in Bar.makeAction()");
+            throw new MakeActionException();
         }
     }
 
-    private void releaseDrunk() {
+    private void releaseDrunk() throws CoordinateException {
         Drunk newDrunk = new Drunk();
 
         newDrunk.setBottle(new Bottle());
@@ -50,10 +59,10 @@ public class Bar extends AGameObject {
             field.addObject(newDrunk, entrance.getCoordinates());
         } catch(InvalidCoordinateException e) {
             System.err.println("Invalid Entrance coordinate in Bar");
-            System.exit(0);
+            throw e;
         } catch (NotEmptyCellException e) {
             System.err.println("Bar tried to add Drunk in occupied Cell");
-            System.exit(0);
+            throw e;
         }
         game.registerActiveObject(newDrunk);
     }

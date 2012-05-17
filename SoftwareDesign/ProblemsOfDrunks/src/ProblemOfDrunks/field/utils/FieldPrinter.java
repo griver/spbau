@@ -1,6 +1,6 @@
-package ProblemOfDrunks;
+package ProblemOfDrunks.field.utils;
 
-import ProblemOfDrunks.exeption.InvalidCoordinateException;
+import ProblemOfDrunks.field.exception.InvalidCoordinateException;
 import ProblemOfDrunks.field.ICell;
 import ProblemOfDrunks.field.IField;
 
@@ -23,11 +23,8 @@ public class FieldPrinter {
             ICell cell;
             for(int i=0; i<sizes[0]; i++) {
                 for (int j = 0; j<sizes[1]; j++) {
-                    cell = field.getCell(i, j);
-                    if(cell.isEmpty())
-                        System.out.print('');
-                    else
-                        System.out.print(cell.getFieldObject().getSymbol());
+                    System.out.print(field.getCell(i, j).getSymbol());
+
                 }
                 System.out.println();
             }

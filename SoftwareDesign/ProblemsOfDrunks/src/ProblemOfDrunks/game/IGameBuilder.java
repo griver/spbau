@@ -1,5 +1,6 @@
-package ProblemOfDrunks;
+package ProblemOfDrunks.game;
 
+import ProblemOfDrunks.game.exeption.GameBuilderException;
 import ProblemOfDrunks.field.IField;
 
 /**
@@ -10,7 +11,7 @@ import ProblemOfDrunks.field.IField;
  * To change this template use File | Settings | File Templates.
  */
 public interface IGameBuilder {
-    IGame buildGame();
+    IGame buildGame() throws GameBuilderException;
     void setGame(IGame game);
     void setField(IField field);
 }

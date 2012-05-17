@@ -1,9 +1,12 @@
-package ProblemOfDrunks;
+package ProblemOfDrunks.game.impl;
 
-import ProblemOfDrunks.algorithm.LeeAlgorithm;
-import ProblemOfDrunks.exeption.InvalidCoordinateException;
-import ProblemOfDrunks.exeption.NotEmptyCellException;
+import ProblemOfDrunks.field.impl.LeeAlgorithm;
+import ProblemOfDrunks.game.exeption.GameBuilderException;
+import ProblemOfDrunks.field.exception.InvalidCoordinateException;
+import ProblemOfDrunks.field.exception.NotEmptyCellException;
 import ProblemOfDrunks.field.IField;
+import ProblemOfDrunks.game.IGame;
+import ProblemOfDrunks.game.IGameBuilder;
 import ProblemOfDrunks.objects.buildings.Bar;
 import ProblemOfDrunks.objects.buildings.BottleToMoneyHouse;
 import ProblemOfDrunks.objects.buildings.PoliceDistrict;
@@ -33,7 +36,7 @@ public class StandartBuilder implements IGameBuilder {
 
     //===Methods================================================
     @Override
-    public IGame buildGame() {
+    public IGame buildGame() throws GameBuilderException {
         try{
             if(game == null || field == null)
                 return null;
@@ -52,7 +55,7 @@ public class StandartBuilder implements IGameBuilder {
             beggarHouse.setBeggar(beggar);
     
             district.addPoliceman(policeman);
-            district.setLatern(lantern);
+            district.setLantern(lantern);
 
             field.addObject(lantern,3, 10);
             field.addObject(column, 7, 7);
@@ -66,10 +69,10 @@ public class StandartBuilder implements IGameBuilder {
 
         } catch (InvalidCoordinateException e) {
             System.err.println("Invalid objects coordinates");
-            System.exit(0);
+            throw new GameBuilderException();
         } catch (NotEmptyCellException e) {
             System.err.println("Try to add object on occupied cell");
-            System.exit(0);
+            throw new GameBuilderException();
         }
 
         return game;

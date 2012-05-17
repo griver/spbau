@@ -1,8 +1,6 @@
 package ProblemOfDrunks.objects;
 
-import ProblemOfDrunks.objects.IFieldObject;
-import ProblemOfDrunks.objects.moving.Drunk;
-import ProblemOfDrunks.objects.things.Bottle;
+import ProblemOfDrunks.objects.exception.MakeActionException;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,8 +10,5 @@ import ProblemOfDrunks.objects.things.Bottle;
  * To change this template use File | Settings | File Templates.
  */
 public interface IGameObject {
-    void makeAction();
-    void viewFieldObject(IFieldObject object);
-    void viewFieldObject(Drunk object);
-    void viewFieldObject(Bottle object);
+    void makeAction() throws MakeActionException;
 }

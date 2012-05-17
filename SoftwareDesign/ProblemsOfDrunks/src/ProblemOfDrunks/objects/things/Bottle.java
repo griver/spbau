@@ -20,11 +20,6 @@ public class Bottle extends AFieldObject {
     }
 
     @Override
-    public void processViewing(IGameObject object) {
-        object.viewFieldObject(this);
-    }
-
-    @Override
     public char getSymbol() {
         return 'B';
     }

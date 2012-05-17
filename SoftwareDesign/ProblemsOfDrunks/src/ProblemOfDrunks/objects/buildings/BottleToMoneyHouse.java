@@ -2,7 +2,8 @@ package ProblemOfDrunks.objects.buildings;
 
 import ProblemOfDrunks.field.ICell;
 import ProblemOfDrunks.field.IField;
-import ProblemOfDrunks.IGame;
+import ProblemOfDrunks.game.IGame;
+import ProblemOfDrunks.objects.IGameObject;
 import ProblemOfDrunks.objects.moving.Beggar;
 
 /**
@@ -12,7 +13,7 @@ import ProblemOfDrunks.objects.moving.Beggar;
  * Time: 17:27
  * To change this template use File | Settings | File Templates.
  */
-public class BottleToMoneyHouse extends AGameObject {
+public class BottleToMoneyHouse implements IGameObject {
     //===Fields===============================================
     private IField field;
     private ICell entrance;

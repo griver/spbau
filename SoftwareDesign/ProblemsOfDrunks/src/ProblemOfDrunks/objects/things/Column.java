@@ -19,10 +19,6 @@ public class Column extends AFieldObject {
         object.processColliding(this);
     }
 
-    @Override
-    public void processViewing(IGameObject object) {
-        object.viewFieldObject(this);
-    }
 
     @Override
     public char getSymbol() {

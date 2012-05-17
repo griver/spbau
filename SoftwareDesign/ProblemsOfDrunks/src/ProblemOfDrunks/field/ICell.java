@@ -19,5 +19,6 @@ public interface ICell {
     void setCoordinates(int... values);
     
     int[] getCoordinates();
-    
+
+    char getSymbol();
 }

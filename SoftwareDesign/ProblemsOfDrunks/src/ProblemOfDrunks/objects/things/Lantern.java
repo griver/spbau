@@ -1,8 +1,7 @@
 package ProblemOfDrunks.objects.things;
 
-import ProblemOfDrunks.exeption.InvalidCoordinateException;
+import ProblemOfDrunks.field.exception.InvalidCoordinateException;
 import ProblemOfDrunks.field.ICell;
-import ProblemOfDrunks.objects.IGameObject;
 import ProblemOfDrunks.objects.IMovingObject;
 
 /**
@@ -19,7 +18,7 @@ public class Lantern extends AFieldObject {
         this.brightness = brightness;
     }
 
-    public boolean isLighted(ICell fieldCell) {
+    public boolean isLighted(ICell fieldCell)throws InvalidCoordinateException {
         try {
 
             if(getField().distance(this.getCell(), fieldCell) <= brightness)
@@ -27,7 +26,7 @@ public class Lantern extends AFieldObject {
 
         } catch (InvalidCoordinateException e) {
             e.printStackTrace(System.err);
-            System.exit(0);
+            throw e;
         }
 
         return false;
@@ -38,10 +37,6 @@ public class Lantern extends AFieldObject {
         object.processColliding(this);
     }
 
-    @Override
-    public void processViewing(IGameObject object) {
-        object.viewFieldObject(this);
-    }
 
     @Override
     public char getSymbol() {

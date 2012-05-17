@@ -1,11 +1,12 @@
 package ProblemOfDrunks.objects.moving;
 
-import ProblemOfDrunks.exeption.InvalidCoordinateException;
+import ProblemOfDrunks.field.IPathAlgorithm;
+import ProblemOfDrunks.field.exception.CoordinateException;
+import ProblemOfDrunks.field.exception.InvalidCoordinateException;
+import ProblemOfDrunks.objects.exception.MakeActionException;
 import ProblemOfDrunks.field.ICell;
 import ProblemOfDrunks.objects.IFieldObject;
-import ProblemOfDrunks.objects.IGameObject;
 import ProblemOfDrunks.objects.IMovingObject;
-import ProblemOfDrunks.algorithm.IPathAlgorithm;
 import ProblemOfDrunks.objects.buildings.BottleToMoneyHouse;
 import ProblemOfDrunks.objects.things.Bottle;
 
@@ -38,7 +39,7 @@ public class Beggar extends AMovingObject {
     //===/Constructors===================================================
 
     //===Methods=========================================================
-    private void findBottle(){
+    private void findBottle() throws InvalidCoordinateException {
         HashSet<ICell> visited = new HashSet<ICell>();
         LinkedList<ICell> queue = new LinkedList<ICell>();
 
@@ -49,7 +50,9 @@ public class Beggar extends AMovingObject {
             ICell v = queue.removeFirst();
 
             if(!v.isEmpty()) {
-                v.getFieldObject().processViewing(this);
+                if(v.getFieldObject() instanceof Bottle) {
+                    this.whenFindBottle((Bottle) v.getFieldObject());
+                }
             }
             try{
                 for(ICell u : getField().getCellNeighbors(v)) {
@@ -59,62 +62,59 @@ public class Beggar extends AMovingObject {
                     }
                 }
             }catch(InvalidCoordinateException e) {
-                e.printStackTrace(System.err);
-                System.exit(0);
+                System.out.println("Error in findBottle");
+                throw e;
             }
         }
     }
 
     @Override
-    public void makeAction() {
-        ICell nextCell = null;
-        if(target == null)
-            findBottle();
+    public void makeAction() throws MakeActionException {
+        try{
+            ICell nextCell = null;
+            if(target == null)
+                findBottle();
 
-        if(target != null) {
-            pathFinder.findPath(getCell(), target);
-            nextCell = pathFinder.getNext(getCell(), target);
-        }
-
-        if(nextCell == null) {
-           try {
-                int n = random.nextInt(getField().getCellNeighbors(getCell()).size());
-                nextCell = getField().getCellNeighbors(getCell()).get(n);
-           } catch (InvalidCoordinateException e) {
-               e.printStackTrace(System.err);
-               System.exit(0);
-           }
-        }
-
-        if(target == nextCell){
-            if(target == house.getEntrance()) {
-                house.letIn(this);
-            } else {
-                bottle = target.getFieldObject();
-                bottle.setCell(null);
-                target = house.getEntrance();
+            if(target != null) {
+                pathFinder.findPath(getCell(), target);
+                nextCell = pathFinder.getNext(getCell(), target);
             }
-        } else if(nextCell.isEmpty()) {
-            setCell(nextCell);
+
+            if(nextCell == null) {
+               try {
+                    int n = random.nextInt(getField().getCellNeighbors(getCell()).size());
+                    nextCell = getField().getCellNeighbors(getCell()).get(n);
+               } catch (InvalidCoordinateException e) {
+                   e.printStackTrace(System.err);
+                   System.exit(0);
+               }
+            }
+
+            if(target == nextCell){
+                if(target == house.getEntrance()) {
+                    house.letIn(this);
+                } else {
+                    bottle = target.getFieldObject();
+                    bottle.setCell(null);
+                    target = house.getEntrance();
+                }
+            } else if(nextCell.isEmpty()) {
+                setCell(nextCell);
+            }
+        } catch (CoordinateException e) {
+            System.out.println("Error in Beggar.makeAction()");
+            throw new MakeActionException();
         }
-
-
 
     }
 
-    @Override
-    public void viewFieldObject(Bottle object) {
+    public void whenFindBottle(Bottle object) {
         target = object.getCell();
     }
 
     @Override
     public void getColliding(IMovingObject object) {
         object.processColliding(this);
-    }
-
-    @Override
-    public void processViewing(IGameObject object) {
-        object.viewFieldObject(this);
     }
 
     @Override

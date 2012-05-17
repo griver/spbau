@@ -57,25 +57,6 @@ public abstract class AMovingObject implements IMovingObject {
         return;
     }
 
-    @Override
-    public void makeAction() {
-        return;
-    }
-
-    @Override
-    public void viewFieldObject(IFieldObject object) {
-        return;
-    }
-
-    @Override
-    public void viewFieldObject(Drunk object) {
-        return;
-    }
-
-    @Override
-    public void viewFieldObject(Bottle object) {
-        return;
-    }
     //===/Methods========================================================
 
     //==Setters and getters==============================================
