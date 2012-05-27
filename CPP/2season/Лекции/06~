@@ -1,0 +1,111 @@
+Алгоритмы №6
+
+swap (T &a, T &b) {
+    T t(a);
+    a = b;
+    b = t; 
+}
+
+
+1. Миниалгоритмы
+    swap, iter_swap
+    min, max, и версия с тремя параметрами
+    
+
+как выглядит функтор: 
+template<class T, class F>
+T min(T const &a, T const &b, F comp ) {
+    if(comp(a, b))
+        return a;
+    return b;
+}
+
+
+bool operator()(T, T) Такая штука завется предикат
+
+отличие предикакта от функтора: предикат всегда возращает bool а функтор что угодно.
+
+
+2.Алгоритмы не модифицирующие последовательности
+    count, count_if
+    пример сигнатуры: 
+        count(FwdIt p, FwdIt q, T const &value);
+        count_if(FwdIt p, FwdIt q, Pred pred);
+        
+    bool equal       //как и мисматч принимает три итератора указатель на первый на его конец и на второй
+    bool lexicographical_compare
+    It find
+    find_if
+    search // ищет подпоследовательность
+    max_element
+    min_element     //общее соглашение для контейнеров если не может ничего найти то возращает итератор End
+    mismatch        //как различаются последовательности
+    find_first_of
+    for_each(It, It, Functor) функтор применяется к каждому элементу но может менять элементы.
+
+3. Не модифицирующие требующие упорядоченности
+    lower_bound
+    upper_bound
+    equal_range
+    bool binary_search //есть ли элемент
+    
+
+4. Модифицирующие алгоритмы
+    fill,   
+    fill_n //заполняет n элементов определенным значением
+    generate
+    generate_n  //они принимают функтор генератор который увели
+    random_shuffle интересеный алгоритм посмотреть как он работает 
+    copy(It p, It q, out it)
+    copy_backward
+    copy_if Вообще её нет в стандарте
+    remove_copy, remove_copy_if
+    replace, replace_copy, replace_copy_if, replace_if
+    reverse, reverse_copy
+    rotate, rotate_copy   // |  1 | 2 | -> | 2 |  1 | 
+    swap_ranges
+    remove, remove_if
+    unique, unique_copy // удаляет все равные рядом стоящие элементы
+    
+    Очень стрвнно работают они не удаляют элементы они сдвигают нужное в начало и передают итератор указывающий на новый 'end'
+    
+    идеома реального удаления из контейнера
+    v.erase(remove(v.begin(), v.end(), 0/* вот такие элементы хотим удалить */), v.end())
+    удаление повторений из вектора:
+    sort(v.begin(), v.end());
+    v.erase(unique(v.begin(), v.end()), v.end());
+    
+    Пример где нельзя исползовать модифицирующие себя функторы
+    remove_if(v.begin(), v.end(), IsThird());
+    Он удалит шестой элемент
+    
+    remove_if(It p, It q, Predicate pred);
+
+    transform(It p, It q, Out o, F f)
+    transform(It p1, It q, It p2, Out o, F f)
+        коипрует с приминением функтора f     
+
+    v  accumulate(It p, It q, Value v, F2 f ) f принимет v и текущий элемент 
+    посчитать сумму элементов
+    accumulate(p, q, 0 , plus())
+
+5. Сортировки 
+    sort
+    stable_sort
+    nth_element  //катая порядковая статистика
+    partition
+    partial_sort //получим первую часть массива допустим первые три элемента которые были если бы сортировали весь массив
+    merge
+    
+    есть алгоритмы работы с неинициализированными данными
+    есть операции над множествами
+    операции генерации перестановок
+
+
+ПЕРДИКАТЫ И ФУНКТОРЫ
+которые уже есть 
+less, greater, less_equal, greater_equal, not_equal_to, equal_to, equal, logical_not, logical_and, logical_or, minus, plus, divides, modulus, multiplies
+
+Есть что-то неведомое: unary_function, binary_function      
+    
+

@@ -1,0 +1,68 @@
+#include<iterator>
+#include<algorithm>
+
+using namespace std;
+
+template< class BiDiIt >
+struct skip_iterator : std::iterator< std::bidirectional_iterator_tag, typename std::iterator_traits< BiDiIt >::value_type > {
+public:
+typedef typename std::iterator_traits<BiDiIt>::value_type value_type;
+    
+private: 
+    BiDiIt iterator;
+    BiDiIt end_iterator;
+    BiDiIt begin_iterator; 
+    value_type value;
+    
+public:
+    
+    skip_iterator(BiDiIt start, BiDiIt end, value_type const value): begin_iterator(start),  iterator(start), end_iterator(end), value(value) {  
+        ++(*this);       
+    }
+
+    value_type& operator*() const {
+        return (*iterator);
+    }
+
+    value_type* operator->() const {
+        return &(*iterator);
+    } 
+
+    skip_iterator& operator++() {
+        while(iterator != end_iterator && (*iterator) == value)
+            ++iterator;
+        }
+        return *this;
+    }
+    
+    skip_iterator& operator++(int) {
+        skip_iterator old_skip_iterator(iterator, value);
+        ++(*this);
+        return old_skip_iterator;
+    }
+
+    skip_iterator& operator--() {
+        while(iterator != begin_iterator && (*iterator) == value)
+            --iterator;
+        }
+        return *this;
+    }
+    
+    skip_iterator& operator--(int) {
+        skip_iterator old_skip_iterator(iterator, value);
+        --(*this);
+        return old_skip_iterator;
+    }
+    
+    friend bool operator!=(skip_iterator& a, skip_iterator& b) {
+        return (a.iterator != b.iterator);
+    }
+    friend bool operator==(skip_iterator& a, skip_iterator& b) {
+        return !(a != b);
+    }
+};
+
+
+
+
+
