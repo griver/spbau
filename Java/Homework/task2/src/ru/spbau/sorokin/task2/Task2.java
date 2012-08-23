@@ -1,30 +1,31 @@
 package ru.spbau.sorokin.task2;
 
-import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
-import java.util.Arrays;
-import java.util.Comparator;
+
 
 /**
- * Created with IntelliJ IDEA.
- * User: griver
- * Date: 13.08.12
- * Time: 0:58
- * To change this template use File | Settings | File Templates.
+ * "Main" class for second java homework.
+ *
+ * @author Sorokin Artyom
  */
 public class Task2 {
+
     static public void main(String[] args) {
-        File root = new File(args[0]);
+        if(args.length == 0) return;
 
         try{
-
             PrintStream stream = new PrintStream("output.txt");
+            //PrintStream does not throw an exception in println(String) and close() methods.
             FilesystemWalker walker = new FilesystemWalker(stream);
-            walker.startWalk2(args[0], new PatternFilter());
+            walker.startWalk(args[0], new PatternFilter());
+            stream.close();
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            System.err.println("Couldn't find file: " + args[0]);
+        } catch (SecurityException e) {
+            System.err.println("Sorry, you are not allowed to write to " + args[0]);
         }
 
     }

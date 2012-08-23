@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ru.spbau.sorokin.task2">
+    <output-path>$PROJECT_DIR$/out/artifacts/ru_spbau_sorokin_task2</output-path>
+    <root id="archive" name="ru.spbau.sorokin.task2.jar">
+      <element id="dir-copy" path="$PROJECT_DIR$/src" />
+    </root>
+  </artifact>
+</component>

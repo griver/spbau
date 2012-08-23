@@ -1,80 +1,80 @@
-|_Unix
-      |_Bash
-      |     |_OldTask
-      |     |        |_hw_01
-      |     |        |_hw_01~
-      |     |        |_hw_02
-      |     |        |_hw_02~
-      |     |        |_hw_03
-      |     |        |_hw_03~
-      |     |_Task
-      |           |_bash_sample.sh~
-      |           |_cant_read.sh
-      |           |_coloring_maze.sh
-      |           |_coloring_maze.sh~
-      |           |_maze.sh
-      |           |_maze.sh~
-      |           |_phones.sh
-      |           |_phones.sh~
-      |           |_sample.htm
-      |           |_sample.sh
-      |           |_sample.sh~
-      |           |_ten_day.sh
-      |           |_ten_day.sh~
-      |           |_test_maze
-      |           |_test_maze~
-      |           |_test~
-      |           |_text
-      |           |_text~
-      |_Python
-              |_Homeworks
-              |          |_1
-              |          |  |_02.py
-              |          |  |_03.py
-              |          |_2
-              |          |  |_01.py
-              |          |  |_02.py
-              |          |_3
-              |          |  |_01x.py
-              |          |  |_02.py
-              |          |  |_05.py
-              |          |_4
-              |          |  |_01.py
-              |          |  |_03.py
-              |          |  |_04.py
-              |          |_5
-              |          |  |_03.py
-              |          |  |_04.py
-              |          |  |_05.py
-              |          |_try
-              |               |_testing.py
-              |               |_testing.py~
-              |_LastTask
-                        |_Chat
-                        |     |___pycache__
-                        |     |            |_Console.cpython-32.pyc
-                        |     |_Console.py
-                        |     |_elementary_client.py
-                        |     |_elementary_client.py~
-                        |     |_elementary_server.py
-                        |     |_elementary_server.py~
-                        |     |_key_press.py
-                        |     |_key_press.py~
-                        |     |_sample_client.py
-                        |     |_sample_client.py~
-                        |     |_sample_server.py
-                        |     |_sample_server.py~
-                        |     |_sample_socket.py~
-                        |     |_try_python.py
-                        |     |_try_python.py~
-                        |     |_куча соедниений
-                        |     |                |_sample_client.py
-                        |     |                |_sample_server.py
-                        |     |_одно соедниение
-                        |                      |_other_client.py
-                        |                      |_other_client2.py
-                        |                      |_other_client2.py~
-                        |                      |_other_server.py
-                        |                      |_other_server.py~
-                        |_other chat
-                                    |_chat.py
+Unix
+    |_Bash
+    |     |_OldTask
+    |     |        |_hw_01
+    |     |        |_hw_01~
+    |     |        |_hw_02
+    |     |        |_hw_02~
+    |     |        |_hw_03
+    |     |        |_hw_03~
+    |     |_Task
+    |           |_bash_sample.sh~
+    |           |_cant_read.sh
+    |           |_coloring_maze.sh
+    |           |_coloring_maze.sh~
+    |           |_maze.sh
+    |           |_maze.sh~
+    |           |_phones.sh
+    |           |_phones.sh~
+    |           |_sample.htm
+    |           |_sample.sh
+    |           |_sample.sh~
+    |           |_ten_day.sh
+    |           |_ten_day.sh~
+    |           |_test_maze
+    |           |_test_maze~
+    |           |_test~
+    |           |_text
+    |           |_text~
+    |_Python
+            |_Homeworks
+            |          |_1
+            |          |  |_02.py
+            |          |  |_03.py
+            |          |_2
+            |          |  |_01.py
+            |          |  |_02.py
+            |          |_3
+            |          |  |_01x.py
+            |          |  |_02.py
+            |          |  |_05.py
+            |          |_4
+            |          |  |_01.py
+            |          |  |_03.py
+            |          |  |_04.py
+            |          |_5
+            |          |  |_03.py
+            |          |  |_04.py
+            |          |  |_05.py
+            |          |_try
+            |               |_testing.py
+            |               |_testing.py~
+            |_LastTask
+                      |_Chat
+                      |     |___pycache__
+                      |     |            |_Console.cpython-32.pyc
+                      |     |_Console.py
+                      |     |_elementary_client.py
+                      |     |_elementary_client.py~
+                      |     |_elementary_server.py
+                      |     |_elementary_server.py~
+                      |     |_key_press.py
+                      |     |_key_press.py~
+                      |     |_sample_client.py
+                      |     |_sample_client.py~
+                      |     |_sample_server.py
+                      |     |_sample_server.py~
+                      |     |_sample_socket.py~
+                      |     |_try_python.py
+                      |     |_try_python.py~
+                      |     |_куча соедниений
+                      |     |                |_sample_client.py
+                      |     |                |_sample_server.py
+                      |     |_одно соедниение
+                      |                      |_other_client.py
+                      |                      |_other_client2.py
+                      |                      |_other_client2.py~
+                      |                      |_other_server.py
+                      |                      |_other_server.py~
+                      |_other chat
+                                  |_chat.py
